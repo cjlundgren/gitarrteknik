@@ -23,7 +23,12 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body { background: var(--paper); color: var(--ink); font: 16px/1.55 var(--sans); }
-.topbar { padding: 12px 20px; background: var(--ink); color: #f7f3ec; }
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: var(--ink); color: #f7f3ec; }
+.stod { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 999px;
+  color: #bfb5a6; font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.stod:hover { color: #e9a07f; background: #3a352e; }
+.stod[hidden] { display: none; }
+@media (max-width: 600px) { .stod span { display: none; } .stod { padding: 6px 8px; } }
 .brand { font-family: var(--serif); font-weight: 700; font-size: 19px; }
 .brand span { color: #e9a07f; }
 main { max-width: 860px; margin: 0 auto; padding: 48px 16px 32px; }
@@ -47,7 +52,7 @@ h1 { margin: 0 0 10px; font-family: var(--serif); font-size: clamp(32px, 6vw, 48
 </style>
 </head>
 <body>
-<header class="topbar"><div class="brand">Teknik<span>kort</span></div></header>
+<header class="topbar"><div class="brand">Teknik<span>kort</span></div><a class="stod" href="https://ko-fi.com/gitarrteknik" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" title="Bjud på ett paket strängar"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.9 5 6.5 5c2 0 3.4 1.1 4.2 2.4h2.6C14.1 6.1 15.5 5 17.5 5 21.1 5 23.1 8.6 21.6 11.9 19.5 16.4 12 21 12 21z"/></svg><span>Stöd</span></a></header>
 <main>
   <h1>Teknikkort för gitarr och elbas</h1>
   <p class="ingress">Korta övningar som bygger på varandra, ett kort i taget. Med noter, tabb, greppbilder
