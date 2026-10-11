@@ -435,7 +435,7 @@ const cell = new alphaTab.AlphaTabApi($('#cell-at'), {
   core: { fontDirectory: AT + 'font/', enableLazyLoading: false },
   notation: { elements: dolda() },
   display: { scale: 0.8 },
-  player: { enablePlayer: false },
+  player: { enablePlayer: false, scrollMode: alphaTab.ScrollMode.Off },
 });
 
 main.soundFontLoad.on(e => { if (e.total) status(`Laddar ljud … ${Math.round(e.loaded / e.total * 100)} %`); });
@@ -742,7 +742,7 @@ function byggGuide() {
       core: { fontDirectory: AT + 'font/', enableLazyLoading: false },
       notation: { elements: dolda() },
       display: { scale: smal() ? 0.8 : 0.95 },
-      player: { enablePlayer: false },
+      player: { enablePlayer: false, scrollMode: alphaTab.ScrollMode.Off },
     }).tex(ex.tex, [0]);
   });
 }
